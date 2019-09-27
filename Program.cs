@@ -24,6 +24,7 @@ namespace Bakery
             newPastry.PastryDeal(PastryInput);
             int Checkout = newPastry.PastryTotal + newBread.BreadTotal;
             Console.WriteLine("Your total is: $" + Checkout);
+            Console.WriteLine("------------------------------------");
         }
     }
 }
