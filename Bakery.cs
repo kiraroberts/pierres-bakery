@@ -4,39 +4,48 @@ namespace Bakery.Deals
 {
     class Bread
     {
-        public int BreadBasePrice { get; set; }
-        public Bread(int breadBasePrice)
+        public int BreadOrder { get; set; }
+        public int BreadTotal { get; set; }
+        public Bread(int breadOrder, int breadTotal)
         {
-            BreadBasePrice = breadBasePrice;
+            BreadOrder = breadOrder;
+            BreadTotal = breadTotal;
         }
-        public int breadDeal(int inputBreadOrder)
+        public void BreadDeal(int breadOrder)
         {
-            if (inputBreadOrder == 1)
+            if (breadOrder == 1)
             {
-                return 5;
+                BreadTotal = 5;
             }
-            else if (inputBreadOrder => 2)
+            else
             {
-                return (inputBreadOrder * 5) - 5;
+                BreadTotal = (breadOrder * 5) - 5;
             }
+            
         }
     }
     class Pastry
     {
-        public int PastryBasePrice { get; set; }
-        public Pastry(int pastryBasePrice)
+        public int PastryOrder { get; set; }
+        public int PastryTotal { get; set; }
+        public Pastry(int pastryOrder, int pastryTotal)
         {
-            PastryBasePrice = pastryBasePrice;
+            PastryOrder = pastryOrder;
+            PastryTotal = pastryTotal;
         }
-        public int pastryDeal(int inputPastryOrder)
+        public void PastryDeal(int pastryOrder)
         {
-            if (inputPastryOrder == 1)
+            if (pastryOrder == 1)
             {
-                return 2;
+                PastryTotal = 2;
             }
-            else if (inputPastryOrder => 3)
+            else if (pastryOrder == 2)
             {
-                return (inputPastryOrder * 2) - 1;
+                PastryTotal = 4;
+            }
+            else
+            {
+                PastryTotal = (pastryOrder * 3) - 1;
             }
         }
     }
