@@ -21,6 +21,10 @@ namespace Bakery.Deals
             {
                 BreadTotal = 10;
             }
+            else if (breadOrder == 0)
+            {
+                BreadTotal = 0;
+            }
             else
             {
                 BreadTotal = (breadOrder * 5) - 5;
