@@ -47,6 +47,10 @@ namespace Bakery.Deals
             {
                 PastryTotal = 4;
             }
+            else if (pastryOrder == 0)
+            {
+                PastryTotal = 0;
+            }
             else
             {
                 PastryTotal = (pastryOrder * 3) - 1;
