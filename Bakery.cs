@@ -1,17 +1,13 @@
 using System;
 
-namespace Bakery
+namespace Bakery.Deals
 {
     class Bread
     {
-        private int _breadBasePrice;
+        public int BreadBasePrice { get; set; }
         public Bread(int breadBasePrice)
         {
-            _breadBasePrice = breadBasePrice;
-        }
-        public int GetBreadBasePrice()
-        {
-            return _breadBasePrice;
+            BreadBasePrice = breadBasePrice;
         }
         public int breadDeal(int inputBreadOrder)
         {
@@ -27,14 +23,10 @@ namespace Bakery
     }
     class Pastry
     {
-        private int _pastryBasePrice;
-        public Pastry(int PastryBasePrice)
+        public int PastryBasePrice { get; set; }
+        public Pastry(int pastryBasePrice)
         {
-            _pastryBasePrice = pastryBasePrice;
-        }
-        public int GetPastryBasePrice()
-        {
-            return _pastryBasePrice;
+            PastryBasePrice = pastryBasePrice;
         }
         public int pastryDeal(int inputPastryOrder)
         {
